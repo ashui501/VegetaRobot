@@ -94,7 +94,7 @@ PM_START_TEXT = """ ┗►  *What's Up Yoo! * ◄┛
 buttons = [
     [
         InlineKeyboardButton(
-                            text="☑ ADD VEGETA TO YOUR GROUP ☑",
+                            text="☑ ADD TRUNKS TO YOUR GROUP ☑",
                             url=f"t.me/{BOT_USERNAME}?startgroup=true"),
                     ],
                      [
