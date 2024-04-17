@@ -102,8 +102,8 @@ buttons = [
                        InlineKeyboardButton(text="UPDATES",  url=f"https://t.me/{UPDATES_CHANNEL}"),
                     ],
                    [
-                       InlineKeyboardButton(text="NETWORK", url=f"https://t.me/nandhabots"),
-                       InlineKeyboardButton(text="LOGS", url=f"https://t.me/vegetalogs"),
+                       InlineKeyboardButton(text="NETWORK", url=f"https://t.me/NAMIKAZECPAN"),
+                       InlineKeyboardButton(text="LOGS", url=f"https://t.me/NAMIKAZECPAN"),
                 ],[ InlineKeyboardButton(text="COMMANDS HELP", callback_data="help_back"
          ),
     ],
@@ -123,7 +123,7 @@ GROUPSTART_IMG= "https://te.legra.ph/file/a0bc1a018e83bce7d145c.jpg"
 
 VEGETA_IMG = ( "https://te.legra.ph/file/9a0ccd2f65d3f169798ba.jpg",
                "https://te.legra.ph/file/a0bc1a018e83bce7d145c.jpg",
-               "https://telegra.ph/file/561fa547f3c4940c95ddf.jpg",)       
+               "https://te.legra.ph/file/f61e6bc5a6b7b46589293.jpg",)       
 
 IMPORTED = {}
 MIGRATEABLE = []
