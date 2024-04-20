@@ -21,8 +21,8 @@ class Config(object):
     API_HASH = "awew"
     TOKEN = "wow"  #This var used to be API_KEY but it is now TOKEN, adjust accordingly.
     SQLALCHEMY_DATABASE_URI = "" #Use Your ElephantSQL
-    OWNER_ID = 1491497760  # If you dont know, run the bot and do /id in your private chat with it, also an integer
-    OWNER_USERNAME = "nandhaxd"
+    OWNER_ID = 1602509384  # If you dont know, run the bot and do /id in your private chat with it, also an integer
+    OWNER_USERNAME = "ISHIKKI_AKIRA"
     SUPPORT_CHAT = 'vegetasupport'  #Your own group for support, do not add the @
     UPDATES_CHANNEL = 'vegetaUpdates' #Your own channel for Updates of bot, Do not add @
     JOIN_LOGGER = -1001543354286  #Prints any new group the bot is added to, prints just the name and ID.
