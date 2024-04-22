@@ -81,15 +81,34 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-PM_START_TEXT = """ ┗►  *What's Up Yoo! * ◄┛
-
-~~ *I'm made with Saiyans blood* ~~
-
-~ *Wanna see my commands*[❗]({})
-*below click the help button!* ~
-
-──『*ᴛʜᴀɴᴋs  ғᴏʀ  ᴜsɪɴɢ*』
-""" 
+PM_START_TEXT = """ 
+*Hello* {},[💕]({})
+ I Aᴍ Yᴏᴜʀ TRUNKS. DRAGON
+ BALL ᴛʜᴇᴍᴇᴅ ᴍᴀɴɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴀɴᴅ ᴍᴜsɪᴄ ʙᴏᴛ
+▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱
+🌌 Cᴏɴᴛʀᴏʟ Yᴏᴜʀ Gʀᴏᴜᴘ Eғғᴏʀᴛʟᴇssʟʏ.Tʏᴘᴇ /help Tᴏ Uɴᴠᴇɪʟ Yᴏᴜʀ Lᴏᴠᴇ.
+Lᴇᴛ's Bʀɪɴɢ Oʀᴅᴇʀ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ!.
+"""
+buttons = [
+    [
+        InlineKeyboardButton(
+            text="Aᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ",
+            url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+        ),
+    ],
+    [ 
+        InlineKeyboardButton(text="Mᴜsɪᴄ", callback_data="Music_"),
+        InlineKeyboardButton(text="Aʙᴏᴜᴛ", callback_data="raiden_"),
+    ],  
+    [
+        InlineKeyboardButton(text="Uᴘᴅᴀᴛᴇ", url=f"https://t.me/NAMIKAZECPAN"),
+        InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"),
+    ],
+    [
+        InlineKeyboardButton(text="Hᴇʟᴘ & Cᴏᴍᴍᴀɴᴅs", callback_data="help_back"),
+    ],
+    
+]
 
 buttons = [
     [
