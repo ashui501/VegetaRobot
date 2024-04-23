@@ -1,4 +1,5 @@
 import importlib
+import asyncio
 import random
 import time
 import html
@@ -243,9 +244,8 @@ def start(update: Update, context: CallbackContext):
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
         else:            
-             image = random.choice(VEGETA_IMG)
-             update.effective_message.reply_text(
-                 PM_START_TEXT.format(image),
+             await message.reply_photo(
+            photo=str(choice(PM_START_IMG)),
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
