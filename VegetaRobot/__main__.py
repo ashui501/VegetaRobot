@@ -244,7 +244,7 @@ def start(update: Update, context: CallbackContext):
 
         else:
             image = random.choice(VEGETA_IMG)
-            update.effective_message.reply_text(PM_START_TEXT.format(image),
+            update.effective_message.reply_text(PM_START_TEXT.format(VEGETA_IMG),
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
