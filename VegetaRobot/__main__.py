@@ -81,8 +81,7 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-PM_START_TEXT = """ 
-*Hello* {},[💕]({})
+PM_START_TEXT = """ *Hello* {},[💕]({})
  I Aᴍ Yᴏᴜʀ TRUNKS. DRAGON
  BALL ᴛʜᴇᴍᴇᴅ ᴍᴀɴɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴀɴᴅ ᴍᴜsɪᴄ ʙᴏᴛ
 ▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱
