@@ -247,9 +247,10 @@ def start(update: Update, context: CallbackContext):
 
         else:
             context.bot.send_photo(
-                 chat_id=update.effective_chat.id,
-                 photo=random.choice(VEGETA_IMG),
-                 caption=' *Hello 💤, {}*'.format(update.effective_user.first_name)
+                chat_id=update.effective_chat.id,
+                photo=random.choice(VEGETA_IMG),
+                caption=' *Hello 💤, {}*'.format(update.effective_user.first_name),
+                parse_mode=ParseMode.MARKDOWN,
             )
             time.sleep(3)
             context.bot.send_message(
@@ -266,7 +267,7 @@ def start(update: Update, context: CallbackContext):
              first_name,uptime
             ),
             parse_mode=ParseMode.MARKDOWN,
-        reply_markup=InlineKeyboardMarkup(
+            reply_markup=InlineKeyboardMarkup(
                 [
                   [
                   InlineKeyboardButton(text="SUPPORT", url=f"https://telegram.dog/{SUPPORT_CHAT}"),
@@ -275,7 +276,6 @@ def start(update: Update, context: CallbackContext):
                 ]
             ),
         )
-
 
 def error_handler(update, context):
     """Log the error and send a telegram message to notify the developer."""
