@@ -82,7 +82,7 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-PM_START_TEXT = """ *Hello* [💤]({https://te.legra.ph/file/3ee5496455d9d9baee016.jpg}) ,[💕]({})
+PM_START_TEXT = """ *Hello* 💤,[💕]({})
  I Aᴍ Yᴏᴜʀ TRUNKS. DRAGON
  BALL ᴛʜᴇᴍᴇᴅ ᴍᴀɴɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴀɴᴅ ᴍᴜsɪᴄ ʙᴏᴛ
 ▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱
@@ -141,9 +141,11 @@ DONATE_STRING = """*don't need donate I'm free for everyone add your group's in 
 HELP_IMG= "https://te.legra.ph/file/a0bc1a018e83bce7d145c.jpg"
 GROUPSTART_IMG= "https://te.legra.ph/file/a0bc1a018e83bce7d145c.jpg"
 
-VEGETA_IMG = ( "https://te.legra.ph/file/9a0ccd2f65d3f169798ba.jpg",
-               "https://te.legra.ph/file/a0bc1a018e83bce7d145c.jpg",
-               "https://te.legra.ph/file/f61e6bc5a6b7b46589293.jpg",)       
+VEGETA_IMG = [
+    "https://te.legra.ph/file/9a0ccd2f65d3f169798ba.jpg",
+    "https://te.legra.ph/file/a0bc1a018e83bce7d145c.jpg",
+    "https://te.legra.ph/file/f61e6bc5a6b7b46589293.jpg"
+             ]
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -246,7 +248,7 @@ def start(update: Update, context: CallbackContext):
         else:            
             image = random.choice(VEGETA_IMG)           
             update.effective_message.reply_text(
-                PM_START_TEXT, 
+                trxt=PM_START_TEXT.format(image), 
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
