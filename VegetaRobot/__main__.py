@@ -245,7 +245,12 @@ def start(update: Update, context: CallbackContext):
             elif args[0][1:].isdigit() and "rules" in IMPORTED:
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
-        else:            
+        else:
+            update.effective_message.reply_photo(
+                 photo=random.choice(VEGETA_IMG),
+                 caption='edit here, whatever you need'
+            )
+                
             image = random.choice(VEGETA_IMG)           
             update.effective_message.reply_text(
                 text=PM_START_TEXT.format(image), 
