@@ -244,8 +244,9 @@ def start(update: Update, context: CallbackContext):
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
         else:            
-             message.reply_photo(
-             photo=str(choice(PM_START_IMG)),
+            image = random.choice(VEGETA_IMG)           
+            update.effective_message.reply_text(
+                PM_START_TEXT, 
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
