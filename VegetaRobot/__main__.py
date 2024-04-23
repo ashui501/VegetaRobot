@@ -244,8 +244,8 @@ def start(update: Update, context: CallbackContext):
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
         else:            
-             await message.reply_photo(
-            photo=str(choice(PM_START_IMG)),
+             message.reply_photo(
+             photo=str(choice(PM_START_IMG)),
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
@@ -372,7 +372,7 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(next_page + 1, HELPABLE, "help")
-                ),
+                ), 
             )
 
         elif back_match:
