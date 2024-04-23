@@ -82,7 +82,7 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-PM_START_TEXT = """ *Hello* 💤,[💕]({})
+PM_START_TEXT = """
  I Aᴍ Yᴏᴜʀ TRUNKS. DRAGON
  BALL ᴛʜᴇᴍᴇᴅ ᴍᴀɴɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴀɴᴅ ᴍᴜsɪᴄ ʙᴏᴛ
 ▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱
@@ -246,14 +246,15 @@ def start(update: Update, context: CallbackContext):
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
         else:
-            update.effective_message.reply_photo(
+            context.bot.send_photo(
+                 chat_id=update.effective_chat.id,
                  photo=random.choice(VEGETA_IMG),
-                 caption='Hello im trunks'
+                 caption=' *Hello 💤, {}*'.format(update.effective_user.first_name)
             )
-                
-            image = random.choice(VEGETA_IMG)           
-            update.effective_message.reply_text(
-                text=PM_START_TEXT.format(image), 
+            time.sleep(3)
+            context.bot.send_message(
+                chat_id=update.effective_chat.id,
+                PM_START_TEXT, 
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
