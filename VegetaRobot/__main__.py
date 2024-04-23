@@ -248,7 +248,7 @@ def start(update: Update, context: CallbackContext):
         else:
             update.effective_message.reply_photo(
                  photo=random.choice(VEGETA_IMG),
-                 caption='edit here, whatever you need'
+                 caption='Hello im trunks'
             )
                 
             image = random.choice(VEGETA_IMG)           
