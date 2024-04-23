@@ -249,16 +249,11 @@ def start(update: Update, context: CallbackContext):
             context.bot.send_photo(
                  chat_id=update.effective_chat.id,
                  photo=random.choice(VEGETA_IMG),
-                 caption=' *Hello 💤, {}*'.format(update.effective_user.first_name)
+                 caption="*Hello 💤, {}*".format(update.effective_user.first_name)
             )
             time.sleep(3)
             context.bot.send_message(
-                chat_id=update.effective_chat.id,
-                PM_START_TEXT, 
-                reply_markup=InlineKeyboardMarkup(buttons),
-                parse_mode=ParseMode.MARKDOWN,
-                timeout=60,
-            )
+                chat_id=update.effective_chat.id, text=PM_START_TEXT, reply_markup=InlineKeyboardMarkup(buttons), parse_mode=ParseMode.MARKDOWN, timeout=60)
     else:
         first_name = update.effective_user.first_name
         update.effective_message.reply_animation(
