@@ -244,7 +244,8 @@ def start(update: Update, context: CallbackContext):
 
         else:
             image = random.choice(VEGETA_IMG)
-            update.effective_message.reply_text(PM_START_TEXT.format(VEGETA_IMG),
+            update.effective_message.reply_text(
+                PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
@@ -396,7 +397,7 @@ def vegeta_about_callback(update, context):
     if query.data == "vegeta_back":
         vegeta_img = random.choice(VEGETA_IMG)
         query.message.edit_text(
-                PM_START_TEXT.format(VEGETA_IMG),
+                PM_START_TEXT.format(vegeta_img),
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
