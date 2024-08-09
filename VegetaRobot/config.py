@@ -17,17 +17,17 @@ class Config(object):
     # REQUIRED
     #Login to https://my.telegram.org and fill in these slots with the details given by it
 
-    API_ID = 12345   # integer value, dont use ""
-    API_HASH = "awew"
-    TOKEN = "wow"  #This var used to be API_KEY but it is now TOKEN, adjust accordingly.
-    SQLALCHEMY_DATABASE_URI = "" #Use Your ElephantSQL
-    OWNER_ID = 1602509384  # If you dont know, run the bot and do /id in your private chat with it, also an integer
-    OWNER_USERNAME = "ISHIKKI_AKIRA"
-    SUPPORT_CHAT = 'vegetasupport'  #Your own group for support, do not add the @
-    UPDATES_CHANNEL = 'vegetaUpdates' #Your own channel for Updates of bot, Do not add @
-    JOIN_LOGGER = -1001543354286  #Prints any new group the bot is added to, prints just the name and ID.
+    API_ID = 24074986   # integer value, dont use ""
+    API_HASH = "f4f6272a85d0e50e39a24cb378be118d"
+    TOKEN = "7256020855:AAGrICFaNKU4kZEAidTeImcPXqei5jSEBmA"  #This var used to be API_KEY but it is now TOKEN, adjust accordingly.
+    SQLALCHEMY_DATABASE_URI = "postgres://rkffvakt:o7mkbX8hS7h5IPhMyPHSteGaWvuDYOp-@surus.db.elephantsql.com/rkffvakt" #Use Your ElephantSQL
+    OWNER_ID = 5835284385  # If you dont know, run the bot and do /id in your private chat with it, also an integer
+    OWNER_USERNAME = "AKIRA_ISHIKKI"
+    SUPPORT_CHAT = 'ApeX_Chats'  #Your own group for support, do not add the @
+    UPDATES_CHANNEL = 'TeamXApex' #Your own channel for Updates of bot, Do not add @
+    JOIN_LOGGER = -1002203667956  #Prints any new group the bot is added to, prints just the name and ID.
     REM_BG_API_KEY = "dxsh728mZMDmj4ijSZCNPZig"
-    EVENT_LOGS = -1001543354286  #Prints information like gbans, sudo promotes, AI enabled disable states that may help in debugging and shit
+    EVENT_LOGS = -1002203667956  #Prints information like gbans, sudo promotes, AI enabled disable states that may help in debugging and shit
     LOAD = []
     NO_LOAD = ['rss', 'cleaner', 'connection', 'math']
     WEBHOOK = None
@@ -35,7 +35,7 @@ class Config(object):
     URL = None
     SPAMWATCH_API = ""  # go to support.spamwat.ch to get key -
     SPAMWATCH_SUPPORT_CHAT = "@SpamWatchSupport"
-    BOT_ID = "2128359921"
+    BOT_ID = "7281123784"
     
     DRAGONS = get_user_list('elevated_users.json', 'sudos')
 
